@@ -1,11 +1,20 @@
 # naive solution
+# def is_Sorted(l):
+#   i=1
+#   while i<len(l):
+#     if l[i]<l[i-1]:
+#       return False
+#     i=i+1
+#   return True
+
+# library method solution
 def is_Sorted(l):
-  i=1
-  while i<len(l):
-    if l[i]<l[i-1]:
-      return False
-    i=i+1
-  return True
+  sl=sorted(l)
+  if sl==l:
+    return True
+  else:
+    return False
+      
 if __name__=="__main__":
   l=[10,20,30,40]
   if is_Sorted(l):
